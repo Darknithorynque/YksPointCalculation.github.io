@@ -1,71 +1,4 @@
 
-/*
-class tyt{
-
-
-   constructor(turkceD,turkceY,matD,matY,sosD,sosY,fenD,fenY) {
-        
-        this.turkceD=turkceD;
-        this.turkceY=turkceY;
-        this.matD=matD;
-        this.matY=matY;
-        this.sosD=sosD;
-        this.sosY=sosY;
-        this.fenD=fenD;
-        this.fenY=fenY;
-
-    } 
-
-      turkceD =document.getElementById("turkceD").value;
-      turkceY= document.getElementById("turkceY").value;
-
-    constructor(turkceD,turkceY){
-
-        this.turkceD=turkceD;
-        this.turkceY=turkceY;
-    }
-
-
-   /* getCalculatePoint(){
-
-        
-        let turkce_p= parseInt(this.turkceD-(this.turkceY*0.25));
-        console.log(turkce_p);
-        let mat_p= this.matD-(this.matY*0.25);
-        console.log(mat_p);
-
-        let sos_p= this.sosD-(this.sosY*0.25);
-        console.log(sos_p);
-
-        let fen_p= this.fenD-(this.fenY*0.25);
-
-       
-
-        return(turkce_p+mat_p+sos_p+fen_p);
-
-    } 
-
-    getTurkcePoint(){
-
-        let turkce_point= parseInt(this.turkceD-(this.turkceY*0.25));
-
-        return(turkce_point);
-
-    }
-
-
-
-
-
-let person= new tyt(turkceD,turkceY).getTurkcePoint();
-
-
-console.log(document.getElementById("turkceD"));
-
-let marco= document.getElementById("netTurkce");
-
-   */
-
 function labelTurkceD(){
 
 
@@ -85,17 +18,6 @@ function labelTurkceD(){
  
 
   }
-/*
-  if(sum>40){
-
-    let point0= document.getElementById("turkceD").value=0;
-    document.querySelector("#netTurkce").innerHTML=point0;
-    document.getElementById("turkceY").value=0;
-
-    alert("40 sorudan fazla ifade girilemez.");
-    
-
-  } */
 
 
   if(parseFloat(trkD)<0){
@@ -147,18 +69,7 @@ function labelTurkceY(){
 
 }
 
-/*
 
-if(sum>40){
-
-  let point0= document.getElementById("turkceD").value=0;
-  document.querySelector("#netTurkce").innerHTML=point0;
-  document.getElementById("turkceY").value=0;
-
-  alert("40 sorudan fazla ifade girilemez.");
-  
-
-} */
 
 
 if(parseFloat(trkY)<0){
@@ -200,17 +111,7 @@ function labelMat(){
   matY= parseFloat(document.getElementById("matY").value);
   sum= matD+matY;
  
-  /*
-  if(matY>40){
- 
-   let point0= document.getElementById("matD").value=0;
-   document.querySelector("#netMat").innerHTML=point0;
-   document.getElementById("matY").value=0;
- 
-   alert("40 sorudan fazla ifade girilemez.");
- 
- 
- } */
+
 
  if((matD>40 || matY>40) || sum>40){
  
@@ -249,13 +150,7 @@ if((matD>=0 && matD<=40) || (matY>=0 && matY<=40)){
   document.querySelector("#netMat").innerHTML=point2;
 
   }
- /*
-     if(matY>=0 && matY<=40){
- 
-     let point2 = document.getElementById("netMat").value= document.getElementById("matD").value - (document.getElementById("matY").value*0.25) ;
-     document.querySelector("#netMat").innerHTML=point2;
- 
-     } */
+
 
    
  
@@ -291,30 +186,7 @@ function labelSos(){
  
  }
 
- /*
 
- if(sosD>20){
- 
-  let point0= document.getElementById("sosD").value=0;
-  document.querySelector("#netSos").innerHTML=point0;
-  document.getElementById("sosY").value=0;
-
-  alert("20 sorudan fazla ifade girilemez.");
-
-
-}
- 
- if(sum>20){
- 
-   let point0= document.getElementById("sosD").value=0;
-   document.querySelector("#netSos").innerHTML=point0;
-   document.getElementById("sosY").value=0;
- 
-   alert("20 sorudan fazla ifade girilemez.");
-   
- 
- }  */
- 
  
  if(parseFloat(sosY)<0 || parseFloat(sosD)<0){
  
@@ -325,15 +197,7 @@ function labelSos(){
    alert("Negatif bir ifade girilemez.");
  } 
 
- /*
- if(parseFloat(sosD)<0){
- 
-  let point0= document.getElementById("sosD").value=0;
-  document.querySelector("#netSos").innerHTML=point0;
-  document.getElementById("sosY").value=0;
 
-  alert("Negatif bir ifade girilemez.");
-}  */
  
  
  
@@ -344,14 +208,7 @@ function labelSos(){
  
      }
 
-     /*
-
-     if(sosD>=0 && sosD<=20){
- 
-      let point2 = document.getElementById("netSos").value= document.getElementById("sosD").value - (document.getElementById("sosY").value*0.25) ;
-      document.querySelector("#netSos").innerHTML=point2;
-  
-      } */
+     
  
      // it provides putting 0 if there is no action in true point side
      else{
@@ -388,28 +245,7 @@ function labelFen(){
  
  }
 
- /*
- if(fenD>20){
- 
-  let point0= document.getElementById("fenD").value=0;
-  document.querySelector("#netFen").innerHTML=point0;
-  document.getElementById("fenY").value=0;
 
-  alert("20 sorudan fazla ifade girilemez.");
-
-
-}
- 
- if(sum>20){
- 
-   let point0= document.getElementById("fenD").value=0;
-   document.querySelector("#netFen").innerHTML=point0;
-   document.getElementById("fenY").value=0;
- 
-   alert("20 sorudan fazla ifade girilemez.");
-   
- 
- }     */
  
  
  if(parseFloat(fenY)<0){
@@ -438,13 +274,7 @@ function labelFen(){
      document.querySelector("#netFen").innerHTML=point2;
  
      }
-/*
-     if(fenD>=0 && fenD<=20){
- 
-      let point2 = document.getElementById("netFen").value= document.getElementById("fenD").value - (document.getElementById("fenY").value*0.25) ;
-      document.querySelector("#netFen").innerHTML=point2;
-  
-      } */
+
  
      // it provides putting 0 if there is no action in true point side
      else{
@@ -495,29 +325,7 @@ function labelEdeb(){
 
 }
 
- /*
- if(edebD>24){
- 
-  let point0= document.getElementById("edebD").value=0;
-  document.querySelector("#netTurkDili").innerHTML=point0;
-  document.getElementById("edebY").value=0;
 
-  alert("24 sorudan fazla ifade girilemez.");
-
-
-} 
- 
- if(sum>24){
- 
-   let point0= document.getElementById("edebD").value=0;
-   document.querySelector("#netTurkDili").innerHTML=point0;
-   document.getElementById("edebY").value=0;
- 
-   alert("24 sorudan fazla ifade girilemez.");
-   
- 
- }*/
- 
  
 
  
@@ -530,13 +338,7 @@ function labelEdeb(){
  
      }
 
-     /*
-     if(edebD>=0 && edebD<=24){
- 
-      let point2 = document.getElementById("netTurkDili").value= document.getElementById("edebD").value - (document.getElementById("edebY").value*0.25) ;
-      document.querySelector("#netTurkDili").innerHTML=point2;
   
-      } */
  
      // it provides putting 0 if there is no action in true point side
      else{
@@ -574,29 +376,7 @@ function labelTarih1(){
  
  }
 
- /*
 
- if(tarih1D>10){
- 
-  let point0= document.getElementById("tarih1D").value=0;
-  document.querySelector("#netTarih1").innerHTML=point0;
-  document.getElementById("tarih1Y").value=0;
-
-  alert("10 sorudan fazla ifade girilemez.");
-
-
-} 
- 
- if(sum>10){
- 
-   let point0= document.getElementById("tarih1D").value=0;
-   document.querySelector("#netTarih1").innerHTML=point0;
-   document.getElementById("tarih1Y").value=0;
- 
-   alert("10 sorudan fazla ifade girilemez.");
-   
- 
- } */
  
  
  if(parseFloat(tarih1Y)<0 || parseFloat(tarih1D)<0){
@@ -608,15 +388,7 @@ function labelTarih1(){
    alert("Negatif bir ifade girilemez.");
  } 
 
- /*
- if(parseFloat(tarih1D)<0){
- 
-  let point0= document.getElementById("tarih1D").value=0;
-  document.querySelector("#netTarih1").innerHTML=point0;
-  document.getElementById("tarih1Y").value=0;
 
-  alert("Negatif bir ifade girilemez.");
-}  */
  
  
  
@@ -627,13 +399,7 @@ function labelTarih1(){
  
      }
 
-     /*
-     if(tarih1D>=0 && tarih1D<=10){
- 
-      let point2 = document.getElementById("netTarih1").value= document.getElementById("tarih1D").value - (document.getElementById("tarih1Y").value*0.25) ;
-      document.querySelector("#netTarih1").innerHTML=point2;
-  
-      } */
+
  
      // it provides putting 0 if there is no action in true point side
      else{
@@ -671,31 +437,7 @@ function labelGeography(){
  
  }
 
- /*
- if(geogD>6){
- 
-  let point0= document.getElementById("geogD").value=0;
-  document.querySelector("#netCografya").innerHTML=point0;
-  document.getElementById("geogY").value=0;
 
-  alert("6 sorudan fazla ifade girilemez.");
-
-
-}
-  */
-
-/*
- if(sum>6 && (geogD<6 || geogY<6)){
- 
-   let point0= document.getElementById("geogD").value=0;
-   document.querySelector("#netCografya").innerHTML=point0;
-   document.getElementById("geogY").value=0;
- 
-   alert("6 sorudan fazla ifade girilemez.");
-   
- 
- } */
- 
  
  if(parseFloat(geogY)<0 || parseFloat(geogD)<0){
  
@@ -706,17 +448,6 @@ function labelGeography(){
    alert("Negatif bir ifade girilemez.");
  } 
 
-
- /*
- if(parseFloat(geogD)<0){
- 
-  let point0= document.getElementById("geogD").value=0;
-  document.querySelector("#netCografya").innerHTML=point0;
-  document.getElementById("geogY").value=0;
-
-  alert("Negatif bir ifade girilemez.");
-}  */
- 
  
  
      if((geogY>=0 && geogY<=6) || (geogD>=0 && geogD<=6)){
@@ -726,13 +457,7 @@ function labelGeography(){
  
      }
 
-     /*
-     if(geogD>=0 && geogD<=6){
- 
-      let point2 = document.getElementById("netCografya").value= document.getElementById("geogD").value - (document.getElementById("geogY").value*0.25) ;
-      document.querySelector("#netCograyfa").innerHTML=point2;
   
-      } */
  
      // it provides putting 0 if there is no action in true point side
      else{
